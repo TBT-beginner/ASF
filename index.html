@@ -59,7 +59,8 @@
               </h2>
               <p className="text-lg leading-relaxed max-w-2xl font-medium text-[#1A1A1A]/80">
                 市販の参考書やアプリでは物足りない？<br />
-                GoogleのAIツールを組み合わせて、自分の弱点に寄り添い、思考力を鍛えるオリジナルの学習環境を作ろう。
+                エンジニアリングの知識がなくても、プロ顔負けの「RAG（検索拡張生成）」システムを構築可能。<br />
+                GoogleのAIツールを組み合わせ、ハルシネーション（もっともらしい嘘）を防ぎながら、自分の弱点に寄り添うオリジナルの学習環境を作ろう。
               </p>
             </div>
           ),
@@ -84,11 +85,11 @@
                   <h3 className="text-2xl font-black mb-4">NotebookLM</h3>
                   <p className="font-bold text-sm mb-4">「君のノートや教科書だけ」を知識源にするAI。</p>
                   <p className="text-[#1A1A1A]/70 text-sm leading-relaxed mb-6">
-                    学校のプリントや自分のまとめノートを読み込ませることで、ハルシネーション（AIの嘘）を防ぎ、テスト範囲に完全に一致した情報だけを元に答えてくれます。
+                    学校のプリントや自分のまとめノート、さらにはYouTubeの解説動画まで読み込ませることで、情報の「ノイズ」を排除。テスト範囲に完全に一致した情報だけを元に答える、信頼性の高い「ナレッジグラフ」を構築します。
                   </p>
                   <ul className="space-y-2 text-sm font-medium border-t border-[#1A1A1A]/20 pt-4">
                     <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4" /> 授業プリントのPDF化</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4" /> 自分のまとめノートのテキスト化</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4" /> YouTube動画の音声テキスト化</li>
                   </ul>
                 </div>
 
@@ -99,11 +100,11 @@
                   <h3 className="text-2xl font-black mb-4">Gem</h3>
                   <p className="font-bold text-sm mb-4">「役割」と「性格」をカスタマイズできるAI。</p>
                   <p className="text-[#1A1A1A]/70 text-sm leading-relaxed mb-6">
-                    「答えをすぐに教えないで、ヒントを出して」「厳しめの添削者になって」など、自分にとって一番勉強になる教え方を事前に設定しておくことができます。
+                    「答えをすぐに教えないで」といった役割設定に加え、最新アップデートによりNotebookLMを直接「知識」として紐付け可能に。さらにディープリサーチ機能やCanvas機能も統合され、リサーチから学習まで一気通貫で行えます。
                   </p>
                   <ul className="space-y-2 text-sm font-medium border-t border-[#1A1A1A]/20 pt-4">
                     <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4" /> 専属の家庭教師化</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4" /> 思考を促す対話の実現</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4" /> NotebookLMとの直接連携</li>
                   </ul>
                 </div>
               </div>
@@ -253,10 +254,10 @@
               <div className="space-y-10">
                 <div className="relative">
                   <h3 className="text-2xl font-black mb-3 flex items-center gap-4">
-                    <span className="text-4xl text-[#1A1A1A]/20">1</span> 教材をデジタル化する
+                    <span className="text-4xl text-[#1A1A1A]/20">1</span> 教材をデジタル化・集約する
                   </h3>
                   <p className="text-sm font-medium leading-relaxed mb-6 pl-12">
-                    テスト範囲のプリント、教科書の該当ページ、自分のまとめノートなどをPDFやテキストファイルにします。
+                    テスト範囲のプリント、教科書の該当ページ、自分のまとめノート（PDFやテキスト）に加え、参考になったYouTubeの解説動画のURLなども用意します。
                   </p>
                   
                   <div className="ml-12 border border-[#1A1A1A] p-6 bg-white/50">
@@ -301,10 +302,10 @@
 
                 <div className="relative">
                   <h3 className="text-2xl font-black mb-3 flex items-center gap-4">
-                    <span className="text-4xl text-[#1A1A1A]/20">3</span> Gem（カスタムAI）を作成する
+                    <span className="text-4xl text-[#1A1A1A]/20">3</span> Gemを作成し、知識を紐付ける
                   </h3>
                   <p className="text-sm font-medium leading-relaxed pl-12">
-                    Geminiを開き、「Gemマネージャー」から新しいGemを作成します。ここで、「どんな先生になってほしいか（プロンプト）」を詳しく設定します。
+                    Geminiを開き、「Gemマネージャー」から新しいGemを作成します。「どんな先生になってほしいか（プロンプト）」を設定した後、<strong className="bg-[#1A1A1A]/10 px-1">最も重要な手順として、「知識（Knowledge）」の項目から、Step2で作成したNotebookLMのノートブックを選択して紐付けます。</strong>
                   </p>
                 </div>
 
@@ -313,7 +314,7 @@
                     <span className="text-4xl text-[#1A1A1A]/20">4</span> 連携させて学習スタート！
                   </h3>
                   <p className="text-sm font-medium leading-relaxed pl-12">
-                    NotebookLMで作った「まとめ」や「用語集」をコピーして、Gemに貼り付けます。「この範囲から問題を出して」と指示すれば、君だけの専用学習アプリの完成です。
+                    知識が直接紐づいたことで、コピペの手間すら不要になりました。Gemに向かって「読み込んだ範囲から問題を出して」と指示するだけで、ハルシネーションのない君だけの専用学習アプリが動き出します。
                   </p>
                 </div>
               </div>
